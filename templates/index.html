@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>SIMPLE FORM</h1>
+    
+    <p>Please write an email.</p>
+
+    <form method="post" action="http://127.0.0.1:8000/sendmail/">
+        {% csrf_token %}
+        <input name="email" type="email" placeholder="Write an email id here"/><br><br>
+        <input name="msg" type="text" placeholder="Write an email message here"/><br><br>
+        <input type="submit"/><br>
+    </form>
+
+{% endblock content %}
